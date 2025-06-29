@@ -1,20 +1,3 @@
-// var swiper = new Swiper(".timeline-cog", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
-
 const cog = document.querySelector(".cog");
 
 let previousIndex = 0;
@@ -24,6 +7,7 @@ const swiper = new Swiper(".timeline-cog", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  initialSlide: 1, // Početni slajd je 2014. (drugi slajd)
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
