@@ -7,6 +7,9 @@
   place-items: center;
   height: 100%;
   overflow: hidden;
+  background: url("/src/assets/images/about-us-timeline-overlay.png") no-repeat
+    center center/cover;
+  z-index: -1;
 }
 /* IDS */
 .timeline-cog {
@@ -48,16 +51,10 @@
 }
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
-  /* background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  ); */
   display: none;
 }
 .swiper-slide-next,
 .swiper-slide-prev {
-  /* margin-top: 150px; */
 }
 /* timeline card */
 .timeline-card__body {
@@ -73,18 +70,19 @@
   font-size: 100px;
   text-align: center;
   margin-bottom: 32px;
-  color: rgb(86, 96, 126);
+  color: rgb(255, 255, 255);
 }
 .timeline-card__body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/src/assets/images/timeline-card__overlay.jpg") no-repeat
-    center center / cover;
+  background: url("/src/assets/images/timeline-card__overlay-white.png")
+    no-repeat center center / cover;
   z-index: -1;
 }
 .timeline-card__list-item {
   font-weight: 100;
+  color: black;
 }
 .timeline-card__list-item strong {
   font-weight: 600;
