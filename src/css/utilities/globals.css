@@ -13,6 +13,7 @@
 }
 /* IDS */
 .timeline-cog {
+  position: relative;
   display: grid;
   place-items: center;
   max-width: 1000px;
@@ -55,6 +56,8 @@
 }
 .swiper-slide-next,
 .swiper-slide-prev {
+  /* position: absolute; */
+  /* z-index: 10000; */
 }
 /* timeline card */
 .timeline-card__body {
@@ -100,4 +103,10 @@
 .timeline-gif {
   border-radius: 100%;
   width: 100px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  z-index: 100;
+  background-color: white;
 }

@@ -18,6 +18,10 @@ const swiper = new Swiper(".timeline-cog", {
   pagination: {
     el: ".swiper-pagination",
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   on: {
     slideChange: function () {
       const currentIndex = this.activeIndex;
