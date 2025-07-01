@@ -63,7 +63,6 @@
 .timeline-card__body {
   position: relative;
   isolation: isolate;
-  background-color: rgba(0, 0, 255, 0.227);
   padding: 16px;
   border-radius: 6px;
   overflow: hidden;
@@ -109,4 +108,29 @@
   color: #fff !important;
   z-index: 100;
   background-color: white;
+}
+.timeline-card--shares li:first-child {
+  background-color: white;
+}
+.timeline-card--shares::before {
+  content: "";
+  background: url("/src/assets/images/shares-img.jpg") no-repeat center
+    center/cover;
+  inset: 0;
+  z-index: -1;
+}
+.first-render--text {
+  perspective: 600px;
+}
+.first-render--text > img {
+  animation: first-render 4s infinite linear;
+}
+
+@keyframes first-render {
+  from {
+    transform: rotatey(0deg);
+  }
+  to {
+    transform: rotatey(360deg);
+  }
 }
