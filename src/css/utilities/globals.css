@@ -74,6 +74,7 @@
   margin-bottom: 32px;
   color: rgb(255, 255, 255);
 }
+
 .timeline-card__body::before {
   content: "";
   position: absolute;
@@ -133,4 +134,8 @@
   to {
     transform: rotatey(360deg);
   }
+}
+.timeline-card__year--current {
+  filter: drop-shadow(0 0 16px #d4e7ff);
+  text-shadow: 0 0 10px rgb(176, 196, 238);
 }

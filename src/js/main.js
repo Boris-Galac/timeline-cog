@@ -26,12 +26,23 @@ const swiper = new Swiper(".timeline-cog", {
     slideChange: function () {
       const currentIndex = this.activeIndex;
 
+      // ROTATE COG
       if (currentIndex > previousIndex) {
-        // swipe right → rotate cog right
-        rotateCog(30); // rotate 30deg clockwise
+        rotateCog(30);
       } else if (currentIndex < previousIndex) {
-        // swipe left → rotate cog left
-        rotateCog(-30); // rotate 30deg counterclockwise
+        rotateCog(-30);
+      }
+
+      // REMOVE previous highlight
+      document
+        .querySelectorAll(".timeline-card__year")
+        .forEach((el) => el.classList.remove("timeline-card__year--current"));
+
+      // ADD class to current
+      const currentSlide = this.slides[currentIndex];
+      const yearEl = currentSlide.querySelector(".timeline-card__year");
+      if (yearEl) {
+        yearEl.classList.add("timeline-card__year--current");
       }
 
       previousIndex = currentIndex;
